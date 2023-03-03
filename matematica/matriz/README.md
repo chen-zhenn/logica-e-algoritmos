@@ -38,8 +38,8 @@ __Em programação__: Uma matriz linha equivale a uma estrutura de dados to tipo
 > __Nota__
 Para matriz quadrada existem duas características comum que são:
 >
->__Diagonal Primária__: É representado por todo elemento onde **i** = **j**.
-__Diagonal Secundária__: É representado por todo elemento onde **i** + **j** = **n + 1**.
+>__Diagonal Primária__: É representado por todo elemento onde **i** = **j**.   
+__Diagonal Secundária__: É representado por todo elemento onde **i** + **j** = **n + 1**.   
 > ==Onde **i** e **j** representa índice **linha** **colun**a e **n** a ordem matriz.==
 
 

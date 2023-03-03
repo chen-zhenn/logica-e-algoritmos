@@ -1,6 +1,6 @@
 # Lógicas e Algoritmos
 
-Repositório dedicado aos estudos de lógicas matemáticas, aplicado à algoritmos no geral...
+Repositório dedicado aos estudos de lógicas matemática, aplicado à algoritmos no geral, bem como estruturas de dados...
 
 ## Lógicas
 

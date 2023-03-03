@@ -1,10 +1,10 @@
-const matrix = require("./data")
+const Diagonals = (matrix = []) => {
 
-const Diagonal = matrix => {
+    if(!matrix || !Array.isArray(matrix)) throw new valueException("Value it must be an array")
+
     const MS = matrix.length // Matrix size
     const PDL = [] // Primary diagonal list
     const SDL = [] // Secondary diagonal list
-
 
     function primary() {
         return PDL
@@ -13,14 +13,15 @@ const Diagonal = matrix => {
         return SDL
     }
 
-    function sum(itemsList){
-        if(itemsList && Array.isArray(itemsList)) return itemsList.reduce((acc,cv) => acc + cv)
-        throw new valueException("Value it must be an array")
+    function sum(itemsList = PDL){
+        if(itemsList && itemsList.length) return itemsList.reduce((acc,cv) => acc + cv)
+        return itemsList.length
     }
 
     function total(){
         const TL = [...PDL,...SDL]
-        return TL.reduce((acc,cv) => acc + cv) 
+        if(TL.length) return TL.reduce((acc,cv) => acc + cv)
+        return TL.length 
     }
 
     function diff(){
@@ -29,9 +30,8 @@ const Diagonal = matrix => {
         return Math.max(TPDL,TSDL) - Math.min(TPDL,TSDL)
     }
 
-    function sumListItem(){}
-
     function setDiagonals(){
+            
         for(let i in matrix)
             for(let j in matrix){
                 const EM = matrix[i][j] // Element from matrix
@@ -60,10 +60,4 @@ const Diagonal = matrix => {
     }
 }
 
-const diag = Diagonal(matrix)
-const primaryDiag = diag.primary
-const secondaryDiag = diag.secondary
-const sumPrimaryDiag = diag.sum(primaryDiag)
-const sumSecondaryDiag = diag.sum(secondaryDiag)
-const dioagonalsTotal = diag.total()
-const dioagonalsDiff = diag.diff()
+export { Diagonals }

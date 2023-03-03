@@ -1,0 +1,48 @@
+{
+    "name": "diagonals-matrix",
+    "version": "1.0.0",
+    "description": "Diagonals matrix studies",
+    "main": "index.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/chen-zhenn/logica-e-algoritmos.git"
+    },
+    "author": "Carlos Garcia",
+    "license": "MIT",
+    "type": "module",
+    "scripts": {
+        "lint": "eslint",
+        "test": "jest",
+        "test:watch": "yarn test --watchAll",
+        "js": "esbuild src/js/index.js --bundle --outfile=dist/js/index.js",
+        "js:watch": "yarn js --watch",
+        "js:prod": "yarn js --minify",
+        "html": "yarn pug src/*.pug -o dist",
+        "html:watch": "yarn pug -w src/*.pug -o dist",
+        "css": "sass --source-map src/style/sass/main.sass dist/css/main.css --style compressed",
+        "css:watch": "sass --source-map --watch src/style/sass/main.sass dist/css/main.css --style compressed",
+        "css:prod": "sass --no-source-map src/style/sass/main.sass dist/css/main.css --style compressed",
+        "watchers": "concurrently 'yarn css:watch' 'yarn js:watch' 'yarn html:watch'",
+        "transpile:all": "yarn css && yarn js && yarn html",
+        "build": "rm -rf dist && yarn css:prod && yarn js:prod && yarn html",
+        "server": "lite-server --baseDir=\"dist\"",
+        "dev": "yarn transpile:all && yarn watchers & yarn server",
+        "dev:node": "nodemon dist/js/index.js",
+        "start": "yarn build ; yarn server"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.20.12",
+        "@babel/preset-env": "^7.20.2",
+        "babel-jest": "^29.3.1",
+        "concurrently": "^7.6.0",
+        "esbuild": "^0.16.17",
+        "eslint": "^8.31.0",
+        "eslint-config-idiomatic": "^4.0.0",
+        "jest": "^29.3.1",
+        "lite-server": "^2.6.1",
+        "nodemon": "^2.0.20",
+        "pug": "^3.0.2",
+        "pug-cli": "^1.0.0-alpha6",
+        "sass": "^1.57.1"
+    }
+}

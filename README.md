@@ -8,4 +8,4 @@ Repositório dedicado aos estudos de lógicas matemática, aplicado à algoritmo
 
 * __Matriz__:
     * :point_right: [Referências](matematica/matriz)    
-    * :point_right: [Exemplos](matematica/matriz/logicas)
+    * :point_right: [Exemplos](matematica/logicas)

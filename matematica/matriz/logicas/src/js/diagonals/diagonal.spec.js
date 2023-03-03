@@ -1,24 +1,29 @@
 import { Diagonals } from "./Diagonals"
 
 describe("Diagonal module", () => {
-
+    const objError = {}
+    let matrix = null
+    let diag = null
+    
     describe("Cenário onde a matriz é um dado inválido", () => {
+
+        beforeAll(() => {
+            objError.message = "Matrix it must be an array"
+            objError.name = "Type exception"
+        })
         
         it("Deve levantar uma exceção", () => {
-            const obj = {
-                message: "Value it must be an array",
-                name: "Value exception"
-            }
             try {
-                const diag = Diagonals(null)
+                diag = Diagonals(null)
             } catch (error) {
-                expect(error).toEqual(obj)
+                expect(error).toEqual(objError)
             }
         })
     })
     
-    describe("Cenários onde não foi passado uma matriz", () => {
-        const diag = Diagonals()
+    describe("Cenário onde não foi passado uma matriz", () => {
+        
+        beforeAll(() => diag = Diagonals())
         
         it("Deve retornar um objeto", () => {
             expect(typeof diag).toBe("object")
@@ -42,15 +47,37 @@ describe("Diagonal module", () => {
         })
     })
 
-    describe("Cenário com uma matriz", () => {
-        const matrix = [
-            [11,2,4],
-            [4,5,6],
-            [10,8,-12]
-        ]
-        const diag = Diagonals(matrix)
+    describe("Cenário com uma matriz retangular", () => {
+        
+        beforeAll(() => {
+            matrix = [[11,2,4],[4,5,6]]
+            objError.message = "Matrix it must be type of square"
+            objError.name = "Invalid exception"
+        })
+
+        it("Deve levantar uma exceção", () => {
+            try {
+                diag = Diagonals(matrix)
+            } catch (error) {
+                expect(error).toEqual(objError)
+            }
+        })
+    })
+
+    describe("Cenário com uma matriz quadrada", () => {
+        let matrix = []
+        
+        beforeAll(() => {
+            matrix = [
+                [11,2,4],
+                [4,5,6],
+                [10,8,-12]
+            ]
+           diag = Diagonals(matrix)
+        })
 
         describe("Tamanhos das Diagonais", () => {
+
             it("Deve ter o tamanho de 3 para Diagonal primaria", () => {
                 expect(diag.primary.length).toBe(3)
             })
@@ -83,7 +110,6 @@ describe("Diagonal module", () => {
             })
         })
     })
-
 })
 
 

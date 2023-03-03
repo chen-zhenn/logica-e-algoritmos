@@ -1,6 +1,6 @@
 const Diagonals = (matrix = []) => {
 
-    if(!matrix || !Array.isArray(matrix)) throw new valueException("Value it must be an array")
+    if(!matrix || !Array.isArray(matrix)) throw new dataTypeException("Matrix it must be an array")
 
     const MS = matrix.length // Matrix size
     const PDL = [] // Primary diagonal list
@@ -31,8 +31,11 @@ const Diagonals = (matrix = []) => {
     }
 
     function setDiagonals(){
+     
+        for(let i in matrix){
+
+            if(matrix[i].length !== MS) throw new invalidException("Matrix it must be type of square")
             
-        for(let i in matrix)
             for(let j in matrix){
                 const EM = matrix[i][j] // Element from matrix
                 const VPD = parseInt(i) == parseInt(j) // Is Primary Diagonal value
@@ -40,12 +43,21 @@ const Diagonals = (matrix = []) => {
                 if(VPD) PDL.push(EM)
                 if(VSD) SDL.push(EM)
             }
+        }
+        
     }
 
-    function valueException(message){
+    function invalidException(message){
         return {
             message,
-            name: "Value exception"
+            name: "Invalid exception"
+        }
+    } 
+
+    function dataTypeException(message){
+        return {
+            message,
+            name: "Type exception"
         }
     }
 

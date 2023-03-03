@@ -1,4 +1,4 @@
 # Algebra - Matrizes
 
 ...
-### :point_right: [Lógicas aplicadas](src)
+### :point_right: [Lógicas aplicada](src)

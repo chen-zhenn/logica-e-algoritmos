@@ -5,6 +5,7 @@ const Diagonal = matrix => {
     const PDL = [] // Primary diagonal list
     const SDL = [] // Secondary diagonal list
 
+
     function primary() {
         return PDL
     }
@@ -13,7 +14,8 @@ const Diagonal = matrix => {
     }
 
     function sum(itemsList){
-        return itemsList && Array.isArray(itemsList) ? itemsList.reduce((acc,cv) => acc + cv) : 0
+        if(itemsList && Array.isArray(itemsList)) return itemsList.reduce((acc,cv) => acc + cv)
+        throw new valueException("Value it must be an array")
     }
 
     function total(){
@@ -38,6 +40,13 @@ const Diagonal = matrix => {
                 if(VPD) PDL.push(EM)
                 if(VSD) SDL.push(EM)
             }
+    }
+
+    function valueException(message){
+        return {
+            message,
+            name: "Value exception"
+        }
     }
 
     setDiagonals()

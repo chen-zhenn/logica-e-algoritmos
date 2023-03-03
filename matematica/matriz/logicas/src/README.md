@@ -2,6 +2,7 @@
 
 ...
 
-### __Diagonais__:    
-    
-* :point_right: [Cáculos](js/diagonals)
+## __Diagonais__:
+
+### :point_right: [Cálculos](js/diagonals)
+

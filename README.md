@@ -4,6 +4,6 @@ Repositório dedicado aos estudos de lógicas matemáticas, aplicado à algoritm
 
 ## Lógicas
 
-### Matemáticas
+### Matemática
 
 * :link: __Matriz__: :point_right: [Veja aqui](matematica/matriz/logicas/)

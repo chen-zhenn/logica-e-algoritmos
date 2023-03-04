@@ -1,8 +1,8 @@
-#  Matrizes
+#  Código fonte
 
-...
+Contém códigos fontes de lógicas aplicada a um determinado campo da matemática.
 
-## __Diagonais__:
+## Matrizes
 
-### :point_right: [Cálculos](js/diagonals)
+*  __Diagonais__: :point_right: [Cálculos](js/diagonals)
 

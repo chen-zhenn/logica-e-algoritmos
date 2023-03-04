@@ -1,4 +1,10 @@
-# Algebra - Matrizes
+# Lógicas
 
 ...
-### :point_right: [Lógicas aplicada](src)
+## Algebra
+
+...
+
+### Matrizes
+
+*  __Diagonais__: :point_right: [Cálculos](js/diagonals)

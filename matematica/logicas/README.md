@@ -22,11 +22,15 @@ Certifique-se de estar na raiz do diretório **:open_file_folder: logicas/**.
 
 __1.__ Instale as dependências.
 
-```yarn install```
+```
+yarn install
+```
 
 __2.__ Habilite os watchers para os assets.
 
-```yarn watchers```
+```
+yarn watchers
+```
 
 __3.__ Crie a imagem Docker
 

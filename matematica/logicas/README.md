@@ -7,4 +7,4 @@
 
 ### Matrizes
 
-*  __Diagonais__: :point_right: [Cálculos](js/diagonals)
+*  __Diagonais__: :point_right: [Cálculos](src/js/diagonals)

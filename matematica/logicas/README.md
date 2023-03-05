@@ -26,28 +26,19 @@ __1.__ Instale as dependências.
 
 __2.__ Habilite os watchers para os assets.
 
-
 ```yarn watchers```
 
 __3.__ Crie a imagem Docker
-
-No terminal executar o seguinte comando:
 
 ```docker build -t mathematical-algorithms-lab:v1.0 .```
 
 __4.__ Crie o container Docker.
 
-No terminal execute o seguinte comando:
-
-
 ```docker run --name mathematical-algorithms-lab --network host --volume $(pwd):/lab mathematical-algorithms-lab:v1.0```
 
-> Para maiores informações sobre Docker, consulte a [documentação](https://docs.docker.com/get-started).
-
-Agora, basta abrir seu browser(navegador) em: [http://localhost:3000](http://localhost:3000).
+__5.__ Acesse seu browser(navegador) em: [http://localhost:3000](http://localhost:3000).
 
 ### :boom: Boom!
-
 ## :video_game: Como usar
 
 __1. Ligue o watcher__

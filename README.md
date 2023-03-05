@@ -11,4 +11,5 @@ Repositório dedicado aos estudos de lógicas matemática, aplicado à algoritmo
 * :point_right: [Matrizes](matematica/matriz)
 ### Lógicas:
 
-* :point_right: [Exemplos](matematica/logicas/src/)
+* :point_right: [Documentação](matematica/logicas)
+* :point_right: [Código fonte](matematica/logicas/src)

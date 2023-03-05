@@ -53,7 +53,7 @@ __3. Acesse Web server__
 
 Em: [http://localhost:3000](http://localhost:3000).
 
-> __Nota__: Web server servindo em **:open_file_folder: dist/**
+> __Nota__: Servindo em **:open_file_folder: dist/**
 
 __4. Testes__
 

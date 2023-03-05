@@ -18,8 +18,7 @@ Como instalar o **Docker**, consulte a [documentação](https://docs.docker.com/
 
 ### Configurações iniciais
 
-Certifique-se de estar na raiz do diretório **:open_file_folder: logicas/** para processos abaixo.
-
+Certifique-se de estar na raiz do diretório **:open_file_folder: logicas/**.
 __1.__ Instale as dependências.
 
 ```yarn install```

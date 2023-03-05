@@ -20,27 +20,31 @@ Como instalar o **Docker**, consulte a [documentação](https://docs.docker.com/
 
 Certifique-se de estar na raiz do diretório **:open_file_folder: logicas/**.  
 
-__1.__ Instale as dependências.
+__1. Instale as dependências__
 
 ```
 yarn install
 ```
 
-__2.__ Habilite os watchers para os assets.
+__2. Habilite os watchers para os assets__
 
 ```
 yarn watchers
 ```
 
-__3.__ Crie a imagem Docker
+__3. Crie a imagem Docker__
 
-```docker build -t mathematical-algorithms-lab:v1.0 .```
+```
+docker build -t mathematical-algorithms-lab:v1.0 .
+```
 
-__4.__ Crie o container Docker.
+__4. Crie o container Docker__
 
-```docker run --name mathematical-algorithms-lab --network host --volume $(pwd):/lab mathematical-algorithms-lab:v1.0```
+```
+docker run --name mathematical-algorithms-lab --network host --volume $(pwd):/lab mathematical-algorithms-lab:v1.0
+```
 
-__5.__ Acesse seu browser(navegador) em: [http://localhost:3000](http://localhost:3000).
+__5. Acesse seu browser(navegador) em__: [http://localhost:3000](http://localhost:3000).
 
 ### :boom: Boom!
 ## :video_game: Como usar
